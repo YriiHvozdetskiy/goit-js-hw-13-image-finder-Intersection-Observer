@@ -40,6 +40,7 @@ function onSearch(e) {
     clearImagesGallery();
     fetchImages(images);
   });
+  console.log('без білда');
 }
 
 function fetchImages(images) {
