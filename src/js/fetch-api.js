@@ -2,6 +2,7 @@ import { refs } from './get-refs';
 import imagesTpl from '../templetes/card.hbs';
 import ApiService from './apiService';
 import { instance } from './components/basicLightbox';
+import { observer } from './observer';
 
 import { error } from '@pnotify/core';
 import '@pnotify/core/dist/BrightTheme.css';
@@ -36,11 +37,12 @@ function onSearch(e) {
         delay: 3500,
       });
     }
+    observer;
+    observer.observe(refs.sentinel);
 
     clearImagesGallery();
     fetchImages(images);
   });
-  console.log('без білда');
 }
 
 function fetchImages(images) {
