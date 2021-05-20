@@ -3,7 +3,7 @@ parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcel
 },{}],"eQwa":[function(require,module,exports) {
 "use strict";function e(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function t(e,t){for(var n=0;n<t.length;n++){var r=t[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(e,r.key,r)}}function n(e,n,r){return n&&t(e.prototype,n),r&&t(e,r),e}Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=void 0;var r="https://pixabay.com/api/?image_type=photo&orientation=horizontal&",a=function(){function t(){e(this,t),this.searchQuery="",this.page=1}return n(t,[{key:"fetchImage",value:function(){var e=this,t=new URLSearchParams({q:this.searchQuery,page:this.page,per_page:20,key:"21492726-451e87d3f3afe144072272f85"}),n="".concat(r).concat(t);return fetch(n).then(function(e){return e.json()}).then(function(t){var n=t.hits;return e.incrementPage(),n})}},{key:"query",get:function(){return this.searchQuery},set:function(e){this.searchQuery=e}},{key:"incrementPage",value:function(){this.page+=1}},{key:"resetPage",value:function(){this.page=1}}]),t}();exports.default=a;
 },{}],"EGsz":[function(require,module,exports) {
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.refs=void 0;var e={input:document.querySelector(".js-search-form"),markup:document.querySelector(".gallery"),sentinel:document.querySelector("#sentinel")};exports.refs=e;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.refs=void 0;var e={input:document.querySelector(".js-search-form"),markup:document.querySelector(".gallery"),sentinel:document.querySelector("#sentinel"),arrowUp:document.querySelector(".home")};exports.refs=e;
 },{}],"pAws":[function(require,module,exports) {
 var define;
 var global = arguments[3];
@@ -28,4 +28,4 @@ var e="/home/runner/work/goit-js-hw-13-image-finder-Intersection-Observer/goit-j
 },{}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss"),require("./js/apiService"),require("./js/get-refs"),require("./js//fetch-api"),require("material-design-icons");
 },{"./sass/main.scss":"clu1","./js/apiService":"eQwa","./js/get-refs":"EGsz","./js//fetch-api":"ye0o","material-design-icons":"t6dk"}]},{},["Focm"], null)
-//# sourceMappingURL=/goit-js-hw-13-image-finder-Intersection-Observer/src.5e62a801.js.map
+//# sourceMappingURL=/goit-js-hw-13-image-finder-Intersection-Observer/src.c3200991.js.map
